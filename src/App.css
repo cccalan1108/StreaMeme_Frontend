@@ -1,0 +1,566 @@
+/* App.css */
+
+.app {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  padding: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Upload Section */
+.upload-section {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.file-upload-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.file-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10rem;
+  border: 2px dashed #4b5563;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: #374151;
+  transition: background-color 0.3s;
+}
+
+.file-upload-label:hover {
+  background-color: #4b5563;
+}
+
+.file-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1.5rem;
+}
+
+.upload-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #9ca3af;
+}
+
+.upload-text {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.upload-text-bold {
+  font-weight: 600;
+}
+
+.upload-subtext {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #374151;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem; /* Add spacing between video and file info */
+}
+
+.file-details {
+  display: flex;
+  align-items: center;
+}
+
+.file-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #60a5fa;
+}
+
+.file-name {
+  font-size: 0.875rem;
+}
+
+.upload-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.upload-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.upload-button:disabled {
+  background-color: #4b5563;
+  cursor: not-allowed;
+}
+
+.upload-button.uploading {
+  background-color: #4b5563;
+}
+
+.button-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success Message */
+.success-message {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid #16a34a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.success-content {
+  display: flex;
+  align-items: center;
+}
+
+.success-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #4ade80;
+}
+
+.success-text {
+  color: #bbf7d0;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Video Section */
+.video-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.video-player-container {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  max-height: 24rem;
+  background-color: black;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+/* Suggestions */
+.suggestions-container {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;   /* adjust depending on video height */
+  overflow-y: auto;    /* enable scrolling */
+  padding-right: 8px;  /* space for scrollbar */
+  background-color: #1f2937;
+}
+
+.suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.suggestion-item {
+  padding: 8px;
+  border-radius: 10px;
+  background: #374151;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background: #9ca3af;
+}
+
+.suggestion-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.suggestion-right img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+.timestamp-badge {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  margin-right: 0.75rem;
+  white-space: nowrap;
+}
+
+.suggestion-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.meme-name {
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.meme-description {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.suggestion-right {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+}
+
+.confidence-score {
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.meme-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: fit-content;
+}
+
+.meme-library {
+  display: flex;
+  flex-direction: column;
+}
+
+.meme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.meme-item {
+  background-color: #374151;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.meme-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meme-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.meme-item-name {
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.meme-item-desc {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.meme-thumbnails {
+  column-count: 3;         /* number of vertical columns */
+  column-gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  color: white;
+  padding-top: 10px;
+  flex-wrap: wrap;  
+}
+
+.meme-thumbnail {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: block;
+}
+
+.meme-thumbnail:hover {
+  transform: scale(1.05);   /* subtle zoom on hover */
+}
+
+.meme-type-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.meme-type-badge.happy {
+  background-color: #16a34a;
+  color: #dcfce7;
+}
+
+.meme-type-badge.sad {
+  background-color: #dc2626;
+  color: #fecaca;
+}
+
+.meme-type-badge.angry {
+  background-color: #ea580c;
+  color: #fed7aa;
+}
+
+.meme-type-badge.confused,
+.meme-type-badge.content {
+  background-color: #2563eb;
+  color: #dbeafe;
+}
+
+.meme-overlay {
+  position: absolute;
+  width: 30%;
+  top: 80%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+  animation: memeFade 10s ease-in-out forwards;
+}
+
+.meme-overlay img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+@keyframes memeFade {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+/* Analysis Info */
+.analysis-info {
+  padding: 0.75rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+}
+
+.analysis-title {
+  font-weight: 600;
+  color: #4ade80;
+  margin-bottom: 0.5rem;
+}
+
+.analysis-details {
+  font-size: 0.875rem;
+  color: #d1d5db;
+}
+
+.analysis-details > div {
+  margin-bottom: 0.25rem;
+}
+
+.analysis-details > div:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+  
+  .main-title {
+    font-size: 1.5rem;
+  }
+  
+  .file-upload-label {
+    height: 12rem;
+  }
+  
+  .file-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .suggestion-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .suggestion-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .timestamp-badge {
+    margin-right: 0;
+  }
+}
+.video-upload-placeholder {
+  width: 100%;
+  height: 24rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #4b5563;
+  transition: background-color 0.3s;
+}
+
+.video-upload-placeholder:hover {
+  background-color: #4b5563;
+}
+
+.video-upload-placeholder .file-upload-label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.video-upload-placeholder .file-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
